@@ -1,20 +1,10 @@
 import React from 'react';
 
 const Button = ({ buttonName, clickHandler }) => {
-    let returnValue;
-    if (buttonName === "increase") {
-        returnValue = <button
+    return <button
             onClick={clickHandler}
-            name="increase"
-        >Increase</button>;
-    }
-    else {
-        returnValue = <button
-            onClick={clickHandler}
-            name="decrease"
-        >Decrease</button>
-    }
-    return returnValue;
+            name={buttonName}
+        >{buttonName.charAt(0).toUpperCase() + buttonName.slice(1)}</button>;
 };
 
 export default Button;
